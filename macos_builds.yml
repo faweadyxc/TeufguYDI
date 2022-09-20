@@ -58,13 +58,6 @@ jobs:
           tools: ${{ matrix.tools }}
           tests: ${{ matrix.tests }}
 
-      # Execute unit tests for the editor
-      - name: Unit tests
-        if: ${{ matrix.tests }}
-        run: |
-          ${{ matrix.bin }} --version
-          ${{ matrix.bin }} --help
-          ${{ matrix.bin }} --test
 
       - name: Prepare artifact
         run: |
